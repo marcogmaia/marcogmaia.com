@@ -33,3 +33,22 @@ Sim, ambas usam forwarding tables.
     Os pacotes são repassados tipicamente usando endereços de destino.
 
     Cada roteador tem uma tabela de repasse que mapeia o endereço de destino a enlaces.
+
+
+## R12
+### Roteadores tem endereços IP? se sim, quantos?
+
+Sim, têm um endereço IP para cada interface.
+
+
+## R13
+### Qual é o 32-bit binário equivalente do endereço IP 223.1.3.27?
+
+11011111.00000001.00000011.00011011
+
+
+## R17
+### Suponha que A envia para B um segmento TCP encapsulado em um datagrama IP. Quando B receber o datagrama, como a network layer em B saberá que deverá passar o segmento ao TCP ao invés do UDP ou a qualquer outra coisa?
+
+O campo de 8-bits de protocolo no datagrama IP contém informação sobre qual protocolo de camada de transporte
+o host de destino deverá passar o segmento.
