@@ -83,7 +83,7 @@ Na tabela de repasse da rede de datagrama, as colunas são: endereço de destino
 ## P10
 ### Considere uma rede de datagramas usando um endereço de host de 32 bits. Suponha que um roteador tenha 4 enlaces, numerados de 0 a 3, e que os pacotes tem que ser encaminhados ao enlace
 
-tem uma tabela fazer de codar aqui no html/markdown, to com preguiça...
+tem uma tabela chata de codar/fazer aqui no html/markdown, to com preguiça...
 
 ## P13
 ### Considere um roteador que interconecta 3 subnets: Subnet1..3. Suponha que todas as interfaces precisam ter o prefixo 223.1.17/24. Também suponha que a Subnet1 precise ter pelo menos 60 interfaces, Subnet2 pelo menos 90 interfaces, e Subnet3 pelo menos 12 interfaces. Dê 3 endereços de rede (na forma a.b.c.d/x) que satisfaça essas condições.
@@ -92,3 +92,56 @@ tem uma tabela fazer de codar aqui no html/markdown, to com preguiça...
 1. 223.1.17.0/26
 2. 223.1.17.128/25
 3. 223.1.17.192/28
+
+## P17
+### Considere a topologia abaixo:
+
+{: .center}
+![fig. 4.17]({{site.url}}/imgs/fig-4.17.png)
+
+### Denote as 3 subnets com os host (começando sentido horário em 12:00) como Networks A, B e C. Denote as subnets sem hosts como Networks D, E e F.
+
+#### a) Atribua endereços de rede a cada uma das seis subnets, com as seguintes restrições: todos os endereços tem que ser alocados a partir de 214.97.254/23; Subnet A, B e C tem que suportar 250, 120 e 120 interfaces respectivamente (pelo menos). E claro, as Subnets D, E e F tem que suportar duas interfaces cada, a atribuição tem que ter a forma a.b.c.d/x ou a.b.c.d/x - e.f.g.h/y.
+
+De 214.97.254/23, possíveis atribuições são:
+
+- Subnet A: 214.97.255/24 (256 addresses)
+- Subnet B: 214.97.254.0/25 - 214.97.254.0/29 (128-8 = 120 addresses)
+- Subnet C: 214.97.254.128/25 (128 addresses)
+- Subnet D: 214.97.254.0/31 (2 addresses)
+- Subnet E: 214.97.254.2/31 (2 addresses)
+- Subnet F: 214.97.254.4/30 (4 addresses)
+
+#### b) Utilizando a resposta da letra a), dê uma forwarding table (usando longest prefix matching) para cada roteador.
+
+
+|---
+| Router 1
+|Longest Prefix Match | Outgoing Interface
+|:-|:-:|-
+|11010110 01100001 11111111 | Subnet A
+|11010110 01100001 11111110 0000000 | Subnet D
+|11010110 01100001 11111110 000001 | Subnet F
+|---
+
+----
+
+|---
+| Router 2
+|Longest Prefix Match | Outgoing Interface
+|:-|:-:|-
+|11010110 01100001 11111111 0000000 | Subnet D
+|11010110 01100001 11111110 0 | Subnet B
+|11010110 01100001 11111110 0000001 | Subnet E
+|---
+
+----
+
+|---
+| Router 3
+|Longest Prefix Match | Outgoing Interface
+|:-|:-:|-
+|11010110 01100001 11111111 000001 | Subnet F
+|11010110 01100001 11111110 0000001 | Subnet E
+|11010110 01100001 11111110 1 | Subnet C
+|---
