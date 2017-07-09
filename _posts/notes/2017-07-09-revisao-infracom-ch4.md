@@ -18,3 +18,5 @@ Diferença entre forwarind e routing.
 ## R4
 Roteadores em datagram networks e virtual-circuits networks usam forwarding tables? Se sim, descreva forwarding tables de ambas as classes de redes.
 - Virtual-circuits forwarding tables
+
+        então, vou sar uma sacada nessa porra agora.
