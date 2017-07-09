@@ -58,6 +58,16 @@ o host de destino deverá passar o segmento.
 ### Consideremos os pros e os cons de VC e datagram networks.
 #### a) Suponha que um roteador seja sujeito a condições que causem sua falha com frequência. Nesse caso, qual seria a melhor arquitetura? Por quê?
 
-Com a rede VC, cada falha de roteador envolvido na conexão ~
+Com a rede VC, cada falha de roteador envolvera a rota inteira daquela conexão. No mínimo será preciso que o roteador "upstream" dessa conexão estabeleça um novo caminho até o destino, com todos os requisitos envolvendo a criação de um novo caminho.
+Além disso, todos os roteadores downstream da conexão inicial deverão terminar a conexão, com todo o trabalho envolvido para isso.
 
-#### b) 
+#### b) Suponha que uma fonte e um destino precisem que uma determina capacidade sempre esteja a disposição em todos os roteadores em um caminho entre eles, para o uso exclusivo do tráfego. Isso seria melhor feito em VC ou datagram? Por quê?
+
+Para que um roteador mantenha uma capacidade fixa no caminho entre a fonte e o destido, ele precisaria conhecer as caracteŕisticas do tráfego de todas as sessões passando por esse enlace.
+Isso é apenas possível em uma rede connection-oriented. Portanto uma VC seria necessária.
+
+#### c) Suponha que os enlaces e os roteadores nunca falhem na rede e que os caminhos se mantenham constantes. Nesse caso, qual das duas arquiteturas tem mais controle sobre o overhead do tráfego? Por quê?
+
+Nesse caso, uma rede de datagramas tem mais controle do overhead. Isso se dá por conta dos vários packet headers necessários para rotear os datagramas envolvidos na rede.
+Em uma arquiterura VC, uma vez que o circuito é estabelecido, eles não mudarão, portanto o overhead é negligenciado ao longo prazo.
+
