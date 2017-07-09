@@ -8,15 +8,20 @@ meta: "infraestrutura de comunicação"
 ---
 
 ## R3
-Diferença entre forwarind e routing.
+### Diferença entre forwarind e routing.
 
-    Forwarding refere-se a direcionar o pacote de uma porta de entrada do roteador
-    à porta de saída específica do roteador.
+Forwarding refere-se a direcionar o pacote de uma porta de entrada do roteador
+à porta de saída apropriada.
 
-    Routing é o processo de roteamento fim-a-fim entre roteadores.
+Routing é o processo de determinar o roteamento fim-a-fim (da fonte até o destino).
 
 ## R4
-Roteadores em datagram networks e virtual-circuits networks usam forwarding tables? Se sim, descreva forwarding tables de ambas as classes de redes.
+### Roteadores em datagram networks e virtual-circuits networks usam forwarding tables? Se sim, descreva forwarding tables de ambas as classes de redes.
+
+Sim, ambas usam forwarding tables.
+
 - Virtual-circuits forwarding tables
 
-        então, vou sar uma sacada nessa porra agora.
+    o pacote do VC carrega o número do VC (ao invés do endereço de destino), esse número será trocado a cada enlace, o novo número virá da forwarding table, e os roteadores mantém as informações sobre o estado das conexões.
+
+- Datagram forwarding tables
