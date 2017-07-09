@@ -71,3 +71,14 @@ Isso é apenas possível em uma rede connection-oriented. Portanto uma VC seria 
 Nesse caso, uma rede de datagramas tem mais controle do overhead. Isso se dá por conta dos vários packet headers necessários para rotear os datagramas envolvidos na rede.
 Em uma arquiterura VC, uma vez que o circuito é estabelecido, eles não mudarão, portanto o overhead é negligenciado ao longo prazo.
 
+
+## P3
+### O bare-bone da tabela de repasse numa rede VC tem 4 campos, o que cada um desses campos quer dizer? E o bare-bone de uma rede tem datagramas tem dois campos, o que eles significam?
+
+Numa rede VC, as colunas na tabela de repasse são: interface de entrada, número VC de entrada, interface de saída e número VC de saída.
+
+Na tabela de repasse da rede de datagrama, as colunas são: endereço de destino e interface de saída.
+
+
+## P10
+### Considere uma rede de datagramas usando um endereço de host de 32 bits. Suponha que um roteador tenha 4 enlaces, numerados de 0 a 3, e que os pacotes tem que ser encaminhados ao enlace
