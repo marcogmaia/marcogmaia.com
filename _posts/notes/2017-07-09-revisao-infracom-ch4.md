@@ -82,3 +82,13 @@ Na tabela de repasse da rede de datagrama, as colunas são: endereço de destino
 
 ## P10
 ### Considere uma rede de datagramas usando um endereço de host de 32 bits. Suponha que um roteador tenha 4 enlaces, numerados de 0 a 3, e que os pacotes tem que ser encaminhados ao enlace
+
+tem uma tabela fazer de codar aqui no html/markdown, to com preguiça...
+
+## P13
+### Considere um roteador que interconecta 3 subnets: Subnet1..3. Suponha que todas as interfaces precisam ter o prefixo 223.1.17/24. Também suponha que a Subnet1 precise ter pelo menos 60 interfaces, Subnet2 pelo menos 90 interfaces, e Subnet3 pelo menos 12 interfaces. Dê 3 endereços de rede (na forma a.b.c.d/x) que satisfaça essas condições.
+
+
+1. 223.1.17.0/26
+2. 223.1.17.128/25
+3. 223.1.17.192/28
