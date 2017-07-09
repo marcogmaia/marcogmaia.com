@@ -36,7 +36,7 @@ Sim, ambas usam forwarding tables.
 
 
 ## R12
-### Roteadores tem endereços IP? se sim, quantos?
+### Roteadores tem endereços IP? Se sim, quantos?
 
 Sim, têm um endereço IP para cada interface.
 
@@ -52,3 +52,12 @@ Sim, têm um endereço IP para cada interface.
 
 O campo de 8-bits de protocolo no datagrama IP contém informação sobre qual protocolo de camada de transporte
 o host de destino deverá passar o segmento.
+
+
+## P1
+### Consideremos os pros e os cons de VC e datagram networks.
+#### a) Suponha que um roteador seja sujeito a condições que causem sua falha com frequência. Nesse caso, qual seria a melhor arquitetura? Por quê?
+
+Com a rede VC, cada falha de roteador envolvido na conexão ~
+
+#### b) 
