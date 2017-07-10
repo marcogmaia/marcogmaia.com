@@ -5,8 +5,10 @@ categories: notes
 author: "Marco Maia"
 date:   2017-07-09 5:59:7
 meta: "infraestrutura de comunicação"
+math: true
 ---
 
+---
 ## R3
 ### Diferença entre forwarind e routing.
 
@@ -15,6 +17,7 @@ Forwarding refere-se a direcionar o pacote de uma porta de entrada do roteador
 
 Routing é o processo de determinar o roteamento fim-a-fim (da fonte até o destino).
 
+---
 ## R4
 ### Roteadores em datagram networks e virtual-circuits networks usam forwarding tables? Se sim, descreva forwarding tables de ambas as classes de redes.
 
@@ -34,26 +37,26 @@ Sim, ambas usam forwarding tables.
 
     Cada roteador tem uma tabela de repasse que mapeia o endereço de destino a enlaces.
 
-
+---
 ## R12
 ### Roteadores tem endereços IP? Se sim, quantos?
 
 Sim, têm um endereço IP para cada interface.
 
-
+---
 ## R13
 ### Qual é o 32-bit binário equivalente do endereço IP 223.1.3.27?
 
 11011111.00000001.00000011.00011011
 
-
+---
 ## R17
 ### Suponha que A envia para B um segmento TCP encapsulado em um datagrama IP. Quando B receber o datagrama, como a network layer em B saberá que deverá passar o segmento ao TCP ao invés do UDP ou a qualquer outra coisa?
 
 O campo de 8-bits de protocolo no datagrama IP contém informação sobre qual protocolo de camada de transporte
 o host de destino deverá passar o segmento.
 
-
+---
 ## P1
 ### Consideremos os pros e os cons de VC e datagram networks.
 #### a) Suponha que um roteador seja sujeito a condições que causem sua falha com frequência. Nesse caso, qual seria a melhor arquitetura? Por quê?
@@ -71,7 +74,7 @@ Isso é apenas possível em uma rede connection-oriented. Portanto uma VC seria 
 Nesse caso, uma rede de datagramas tem mais controle do overhead. Isso se dá por conta dos vários packet headers necessários para rotear os datagramas envolvidos na rede.
 Em uma arquiterura VC, uma vez que o circuito é estabelecido, eles não mudarão, portanto o overhead é negligenciado ao longo prazo.
 
-
+---
 ## P3
 ### O bare-bone da tabela de repasse numa rede VC tem 4 campos, o que cada um desses campos quer dizer? E o bare-bone de uma rede tem datagramas tem dois campos, o que eles significam?
 
@@ -79,12 +82,13 @@ Numa rede VC, as colunas na tabela de repasse são: interface de entrada, númer
 
 Na tabela de repasse da rede de datagrama, as colunas são: endereço de destino e interface de saída.
 
-
+---
 ## P10
 ### Considere uma rede de datagramas usando um endereço de host de 32 bits. Suponha que um roteador tenha 4 enlaces, numerados de 0 a 3, e que os pacotes tem que ser encaminhados ao enlace
 
 tem uma tabela chata de codar/fazer aqui no html/markdown, to com preguiça...
 
+---
 ## P13
 ### Considere um roteador que interconecta 3 subnets: Subnet1..3. Suponha que todas as interfaces precisam ter o prefixo 223.1.17/24. Também suponha que a Subnet1 precise ter pelo menos 60 interfaces, Subnet2 pelo menos 90 interfaces, e Subnet3 pelo menos 12 interfaces. Dê 3 endereços de rede (na forma a.b.c.d/x) que satisfaça essas condições.
 
@@ -93,6 +97,7 @@ tem uma tabela chata de codar/fazer aqui no html/markdown, to com preguiça...
 2. 223.1.17.128/25
 3. 223.1.17.192/28
 
+---
 ## P17
 ### Considere a topologia abaixo:
 
@@ -113,7 +118,6 @@ De 214.97.254/23, possíveis atribuições são:
 - Subnet F: 214.97.254.4/30 (4 addresses)
 
 #### b) Utilizando a resposta da letra a), dê uma forwarding table (usando longest prefix matching) para cada roteador.
-
 
 |---
 | Router 1
@@ -145,3 +149,14 @@ De 214.97.254/23, possíveis atribuições são:
 |11010110 01100001 11111110 0000001 | Subnet E
 |11010110 01100001 11111110 1 | Subnet C
 |---
+
+---
+## P19
+### Considere enviar um datagrama de 2400 bytes em um enlace que tem um MTU de 700 bytes. Suponha que o datagrama original é marcado com identificação número 422. Quantos fragmentos serão gerados? Quais são os valores nos vários campos do(s) datagrama(s) IP gerados relacionado à fragmentação?
+
+O tamanho máximo do campo de dados em cada fragmento é de 680 (porque 20 bytes são do IP header). Portanto o número de gramentos necessários é $$ = \lceil{\frac{2400 - 20}{680}}\rceil = 4 $$.
+
+Cada framento terá identificação 422 (incluindo o IP header). 
+O último datagrama terá tamanho de 360 bytes (incluindo o header).
+
+Os offsets dos 4 fragmentos serão 0, 85, 170, 255. Cada um dos 3 primeiros terão flag = 1; o último terá flag = 0.
