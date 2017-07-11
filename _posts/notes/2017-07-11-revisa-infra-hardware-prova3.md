@@ -18,9 +18,46 @@ $$ 64KiB = 2^{16} bytes $$ então o meu índice deve ter 6 bits, como o meu bloc
 
 $$ index = 16 bits \\
 offset = 2 bits \\
-tag = 32 - 16 - 2 - 2 = 14 bits $$
+tag = 32 - 16 - 2 - 2 = 12 bits $$
 
 
 #### b) Associativa por conjunto grau 8 (8 - way set).
 
 Nessa memória, eu procuro em paralelo no meu index, $$ 8 = 2^3 $$, então, eu terei $$64/8 = 2^{16}/2^3 = 2^{13}$$ entradas, portanto o tamanho do meu **index** será 13 bits, o block **offset** 3 bits, 2 bits de offset de endereço, portando a minha **tag** será 32 - 13 - 3 - 2 = 14 bits.
+
+## Questão 2
+### O tamanho do bloco (linha) da cache influencia o desempenho da cache, podendo aumentar o desempenho ou reduzí-lo.
+
+#### a) Dê duas razões porque blocos grandes podem degradar o desempenho. Justifique a resposta
+
+- Blocos grandes demoram mais para ser carregado da memória.
+- Dependendo do tamanho da cache pode gerar mais misses que hits.
+
+#### b) Descreva técnicas que podem ser utilizadas para reduzir os problemas gerados pelo uso de blocos grandes, considerando que o tamanho da cache é fixo.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
