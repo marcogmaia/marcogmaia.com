@@ -23,3 +23,4 @@ tag = 32 - 16 - 2 = 14 bits $$
 
 #### b) Associativa por conjunto grau 8 (8 - way set).
 
+Nessa memória, eu procuro em paralelo no meu index, $$ 8 = 2^3 $$, então, eu terei $$64/8 = 2^{16}/2^3 = 2^13$$ entradas 
