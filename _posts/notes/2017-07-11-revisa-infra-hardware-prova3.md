@@ -14,13 +14,13 @@ math: true
 
 #### a) Mapeamento direto 
 
-$$ 64KiB = 2^{16} bytes $$ então o meu índice deve ter 6 bits, como o meu bloco contém 4 palavras, eu preciso de 2 bits de offset, e o restante é de tag (não levando em consideração bit de validade), portanto:
+$$ 64KiB = 2^{16} bytes $$ então o meu índice deve ter 6 bits, como o meu bloco contém 4 palavras, eu preciso de 2 bits de offset, e o restante é de tag (não levando em consideração bit de validade), menos 2 bits de endereço, e menos o portanto:
 
 $$ index = 16 bits \\
 offset = 2 bits \\
-tag = 32 - 16 - 2 = 14 bits $$
+tag = 32 - 16 - 2 - 2 = 14 bits $$
 
 
 #### b) Associativa por conjunto grau 8 (8 - way set).
 
-Nessa memória, eu procuro em paralelo no meu index, $$ 8 = 2^3 $$, então, eu terei $$64/8 = 2^{16}/2^3 = 2^13$$ entradas 
+Nessa memória, eu procuro em paralelo no meu index, $$ 8 = 2^3 $$, então, eu terei $$64/8 = 2^{16}/2^3 = 2^{13}$$ entradas, portanto o tamanho do meu **index** será 13 bits, o block **offset** 3 bits, 2 bits de offset de endereço, portando a minha **tag** será 32 - 13 - 3 - 2 = 14 bits.
