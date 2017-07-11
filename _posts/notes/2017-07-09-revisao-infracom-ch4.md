@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Infraestrutura de comunicação - Cap. 4"
-categories: infraestrutura de comunicação
+categories: disciplinas infraestrutura_comunicação
 author: "Marco Maia"
 date: 2017-07-09 5:59:7
 meta: "infraestrutura de comunicação"

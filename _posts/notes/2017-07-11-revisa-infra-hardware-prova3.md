@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Infraestrutura de hardware - Rev. 3ª prova"
-categories: infraestrutura de hardware
+categories: disciplinas infraestrutura_hardware
 author: "Marco Maia"
 date: 2017-07-11 1:41:8
 meta: "infraestrutura de hardware"
@@ -14,8 +14,12 @@ math: true
 
 #### a) Mapeamento direto 
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam officiis explicabo hic quam, veniam est quod ipsum at sint? Placeat corrupti ab nam accusamus aspernatur, saepe voluptate veniam mollitia! Illo.
+$$ 64KiB = 2^{16} bytes $$ então o meu índice deve ter 6 bits, como o meu bloco contém 4 palavras, eu preciso de 2 bits de offset, e o restante é de tag (não levando em consideração bit de validade), portanto:
+
+$$ index = 16 bits \\
+offset = 2 bits \\
+tag = 32 - 16 - 2 = 14 bits $$
+
 
 #### b) Associativa por conjunto grau 8 (8 - way set).
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem similique iusto, ullam repellat sapiente harum architecto porro nemo illum illo accusantium ipsa rem recusandae possimus ipsam et molestias! Tenetur, beatae!
