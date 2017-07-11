@@ -17,7 +17,7 @@ math: true
 
 - primary stall
     
-    PS = hit_time + miss_rate
+    $$ PS = hitTime_{l1} + missRate_{l1} * missPenalty_{l1} $$
 
 ---
 ## Questão 1
