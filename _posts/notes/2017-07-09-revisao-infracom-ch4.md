@@ -1,9 +1,9 @@
 ---
 layout: post
 title: "Infraestrutura de comunicação - Cap. 4"
-categories: notes
+categories: infraestrutura de comunicação
 author: "Marco Maia"
-date:   2017-07-09 5:59:7
+date: 2017-07-09 5:59:7
 meta: "infraestrutura de comunicação"
 math: true
 ---
@@ -159,4 +159,5 @@ O tamanho máximo do campo de dados em cada fragmento é de 680 (porque 20 bytes
 Cada framento terá identificação 422 (incluindo o IP header). 
 O último datagrama terá tamanho de 360 bytes (incluindo o header).
 
-Os offsets dos 4 fragmentos serão 0, 85, 170, 255. Cada um dos 3 primeiros terão flag = 1; o último terá flag = 0.
+Os offsets dos 4 fragmentos serão 0, 85, 170, 255. Cada um dos 3 primeiros terão flag de fragmentação = 1; o último terá flag = 0.
+
