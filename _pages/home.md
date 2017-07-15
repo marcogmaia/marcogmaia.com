@@ -4,4 +4,4 @@ permalink: /
 author: Marco Maia
 ---
 
-<!-- # Página em construção. -->
+## Página em construção.
