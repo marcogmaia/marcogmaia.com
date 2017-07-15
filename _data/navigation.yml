@@ -1,7 +1,7 @@
 # main links
 main:
-  - title: disciplinas
-    # url: nao sei ainda a pg.
+  - title: Disciplinas
+    url: /subjects/
   # - title: "Quick-Start Guide"
   #   url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
   # - title: "About"
@@ -12,3 +12,13 @@ main:
   #   url: /collection-archive/
   # - title: "Sitemap"
   #   url: /sitemap/
+
+subjects:
+  - title: "infra de hardware"
+    children:
+      - title: "capítulo 3"
+        url: /subjects/hardware/ch3
+  - title: "infra de comunicação"
+    children:
+      - title: "capítulo 4"
+        url: /subjects/infracom/ch4

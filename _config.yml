@@ -9,7 +9,7 @@
 # theme: minimal-mistakes-jekyll
 
 # Site Settings
-locale                   : "en"
+locale                   : "pt-BR"
 title                    : "Marco Maia"
 title_separator          : "-"
 name                     : "Marco Maia"
