@@ -1,16 +1,25 @@
 ---
-layout: post
+defaults:
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      comments: true
+      share: true
+      related: true
 title: "Infraestrutura de comunicação - Cap. 4"
-categories: disciplinas infraestrutura_comunicação
-author: "Marco Maia"
-date: 2017-07-09 5:59:7
-meta: "infraestrutura de comunicação"
 math: true
 ---
 
+
+{% include toc title="Capítulo 4" icon="file-text" %}
+
 ---
-## R3
-### Diferença entre forwarind e routing.
+# R3. Diferença entre forwarind e routing.
 
 Forwarding refere-se a direcionar o pacote de uma porta de entrada do roteador
 à porta de saída apropriada.
@@ -45,7 +54,7 @@ Sim, têm um endereço IP para cada interface.
 
 ---
 ## R13
-### Qual é o 32-bit binário equivalente do endereço IP 223.1.3.27?
+### Qual é o binário de 32 bits equivalente ao endereço IP 223.1.3.27?
 
 11011111.00000001.00000011.00011011
 
@@ -101,7 +110,6 @@ tem uma tabela chata de codar/fazer aqui no html/markdown, to com preguiça...
 ## P17
 ### Considere a topologia abaixo:
 
-{: .center}
 ![fig. 4.17]({{site.url}}/imgs/fig-4.17.png)
 
 ### Denote as 3 subnets com os host (começando sentido horário em 12:00) como Networks A, B e C. Denote as subnets sem hosts como Networks D, E e F.

@@ -1,7 +1,7 @@
 ---
-layout: post
+layout: archive
 title: "Infraestrutura de hardware - Rev. 3ª prova"
-categories: disciplinas infraestrutura_hardware
+categories: disciplinas infra-hw
 author: "Marco Maia"
 date: 2017-07-11 1:41:8
 meta: "infraestrutura de hardware"
