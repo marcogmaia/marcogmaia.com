@@ -16,6 +16,8 @@ main:
 subjects:
   - title: "infra de hardware"
     children:
+      - title: "2. Instruções: Linguagem do Computador"
+        url: /subjects/hardware/ch2
       - title: "capítulo 3"
         url: /subjects/hardware/ch3
   - title: "infra de comunicação"
