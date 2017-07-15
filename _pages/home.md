@@ -1,8 +1,9 @@
 ---
 layout: single
 permalink: /
-author: Marco Maia
+# author: Marco Maia
 ---
 
+{% include base_path %}
+
 ## Página em construção.
-wtf is this?
