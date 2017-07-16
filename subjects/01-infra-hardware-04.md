@@ -58,7 +58,14 @@ endY:
 ~~~
 
 Em multiciclo temos:
-    - 4 load
-    - 3 store
-    - 1 beq
-    - 6 aritméticas
+- 4 load
+- 3 store
+- 1 beq
+- 6 aritméticas
+
+Dando um total de 63 ciclos.
+CPI de $$ 63/15 = 4.2 $$.
+
+Agora considere que o CPU foi implementado com um **pipeline** de **5 estágios** conforme mostrado na figura abaixo, e executa o mesmo programa.
+
+![fig01.png](/imgs/hardware/fig01.png)
