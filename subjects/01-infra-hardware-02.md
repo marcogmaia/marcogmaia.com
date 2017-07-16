@@ -141,11 +141,12 @@ Considere três processadores P1, P2 e P3 executando o mesmo conjunto de instru�
 
 - Se tentarmos reduzir o tempo em 30%, ocorreria um aumento de 20% no CPI. Qual seria o clock para essa redução?
 
-$$
-T = 10*0.7 = 7s \\
-7 *x*Clock = I *1.2*CPI\\
-10*Clock = I * CPI \\
-x = \frac{1.2*CPI/7}{CPI/10} = 1.7143
-$$    
+    $$
+    T = 10*0.7 = 7s \\
+    7 *x*Clock = I *1.2*CPI\\
+    10*Clock = I * CPI \\
+    x = \frac{1.2*CPI/7}{CPI/10} = 1.7143
+    $$ 
+
 o que nos daria um aumento de 71,43% no clock
 
