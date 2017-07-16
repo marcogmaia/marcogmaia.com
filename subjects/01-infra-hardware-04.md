@@ -41,8 +41,8 @@ sub $t0, $t0, $t1
 sub $t3, $t3, $t2
 addi $t0, $t0, 1
 addi $t2, $t2, 1
-sub $t2, $t2, $1
-sub $t1, $t1, $3
+sub $t2, $t2, $t1
+sub $t1, $t1, $t3
 j endY
 endX:
     sub $t3, $t3, $t2
@@ -58,14 +58,32 @@ endY:
 ~~~
 
 Em multiciclo temos:
-- 4 load
-- 3 store
-- 1 beq
-- 6 aritméticas
+- 4 load = 20 ciclos
+- 1 beq = 4 ciclos
+- 6 aritméticas = 24 ciclos
+- 1 jump = 4 ciclos
+- 3 store = 12 ciclos
 
-Dando um total de 63 ciclos.
-CPI de $$ 63/15 = 4.2 $$.
+Dando um total de 64 ciclos.
+CPI de $$ 64/15 = 4+4/15 $$.
 
 Agora considere que o CPU foi implementado com um **pipeline** de **5 estágios** conforme mostrado na figura abaixo, e executa o mesmo programa.
 
 ![fig01.png](/imgs/hardware/fig01.png)
+
+- Qual o tempo de execução e o CPI com a implementação em pipeline considerando os NOPs que serão inseridos na ocorrência de conflito de dados e de controle. Qual o speedup da implementação em pipeline em comparação ao multiciclo?
+    - 2 NOPs para conflito de dados
+    - 3 NOPs para conflito de controle
+
+
+O que nos dá:
+- 4 load
+- 1 beq -> 3 NOPs
+- 6 aritmética -> 2 NOPs, conflito
+- 1 jump -> 3 NOPs
+- 3 store
+- 8 NOPs
+
+Quantidade de ciclos = (número de estágios do pipeline - 1) + intruções + NOPs.
+
+o que nos dá: 4 + 15 + 8 = 27 ciclos
