@@ -16,10 +16,10 @@ main:
 subjects:
   - title: "infra de hardware"
     children:
-      - title: "2. Instruções: Linguagem do Computador"
+      - title: "2. Instruções: Linguagem do Computador."
         url: /subjects/hardware/ch2
-      - title: "capítulo 3"
-        url: /subjects/hardware/ch3
+      - title: "4. Processador: Pipeline e Superscalar."
+        url: /subjects/hardware/ch4
   - title: "infra de comunicação"
     children:
       - title: "capítulo 4"

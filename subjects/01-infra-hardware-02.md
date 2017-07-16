@@ -1,7 +1,7 @@
 ---
 layout: single
 permalink: /subjects/hardware/ch2
-title: "Instruções: Linguagem do Computador"
+title: "Instruções: Linguagem do Computador."
 modified: 2017-07-15T16:46:49
 math: true
 sidebar:
@@ -110,4 +110,42 @@ Considere três processadores P1, P2 e P3 executando o mesmo conjunto de instru�
     
     Portanto:
         $$ T_2 < T_1 < T_3 $$
+
+- Se os processadores executam um programa em 10 segundos, qual o número de ciclos e de instruções para cada um?
+    
+    $$
+    I = \frac{T * Clock}{CPI} \\
+    Ciclos = T*Clock
+    $$
+    
+    - P1:
+
+    $$
+    I = \frac{10*2*10^9}{1.5} \\
+    Ciclos = 10*2*10^{9} = 2*10^{10}
+    $$
+
+    - P2:
+
+    $$
+    I = \frac{10*1.5*10^9}{1} \\
+    Ciclos = 10*1.5*10^{9} = 1.5*10^{10}
+    $$
+
+    - P3:
+
+    $$
+    I = \frac{10*3*10^9}{2.5} \\
+    Ciclos = 10*3*10^{9} = 3*10^{10}
+    $$
+
+- Se tentarmos reduzir o tempo em 30%, ocorreria um aumento de 20% no CPI. Qual seria o clock para essa redução?
+
+$$
+T = 10*0.7 = 7s \\
+7 *x*Clock = I *1.2*CPI\\
+10*Clock = I * CPI \\
+x = \frac{1.2*CPI/7}{CPI/10} = 1.7143
+$$    
+o que nos daria um aumento de 71,43% no clock
 
