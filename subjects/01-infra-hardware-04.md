@@ -86,4 +86,4 @@ O que nos dá:
 
 Quantidade de ciclos = (número de estágios do pipeline - 1) + intruções + NOPs.
 
-o que nos dá: 4 + 15 + 8 = 27 ciclos
+O que nos dá: 4 + 15 + 8 = 27 ciclos
