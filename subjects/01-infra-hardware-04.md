@@ -1,7 +1,7 @@
 ---
 layout: single
 permalink: /subjects/hardware/ch4
-title: "Processador: Pipeline e Superscalar."
+title: "4. Processador: Pipeline e Superscalar."
 modified: 2017-07-16T19:11:9
 math: true
 sidebar:
@@ -86,4 +86,4 @@ O que nos dá:
 
 Quantidade de ciclos = (número de estágios do pipeline - 1) + intruções + NOPs.
 
-O que nos dá: 4 + 15 + 8 = 27 ciclos
+O que nos dá: 4 + 15 + 8 = 27 ciclos, portanto temos um speedup de 64/27 = 137.03% de speedup.

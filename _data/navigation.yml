@@ -20,6 +20,8 @@ subjects:
         url: /subjects/hardware/ch2
       - title: "4. Processador: Pipeline e Superscalar."
         url: /subjects/hardware/ch4
+      - title: "5. Cache, hierarquia de memória."
+        url: /subjects/hardware/ch5
   - title: "infra de comunicação"
     children:
       - title: "capítulo 4"
