@@ -82,10 +82,10 @@ A cada endereço virtual está associada uma posição na tabela com o endereço
     - **Prós:** Eficiente, fácil de compartilhar, proteção
     - **Cons:** Complexo, pode ocorrer a fragmentação externa, precisa guardar os limites do segmento.
 
-Um sistema possui uma TLB two-way set associativa com 512 entradas. Como se dá a tradução de endereços via TLB.
+<!-- Um sistema possui uma TLB two-way set associativa com 512 entradas. Como se dá a tradução de endereços via TLB.
 
 Quando a memória virtual é acessada, a MMU busca na TLB pelo número da página virtual que será acessada, caso encontre (hit) será usada na entrada da tabela de páginas armazenada na TLB, casa não encontre (miss) o tratador de interrupção buscará uma maneira de contornar a falta do endereço na TLB.
 
 Resumindo, a TLB opera similarmente à cache, reduzindo acessos à memória principal.
 
-1. (Bits virtual - offset) $$\rightarrow 2^{32}, 2^{12}  $$ $$\rightarrow 32 - 12 = 20 $$ 
+1. (Bits virtual - offset) $$\rightarrow 2^{32}, 2^{12}  $$ $$\rightarrow 32 - 12 = 20 $$  -->
