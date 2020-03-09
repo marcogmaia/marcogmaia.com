@@ -107,7 +107,7 @@ PLATFORMS
 DEPENDENCIES
   bundler (~> 1.12)
   minimal-mistakes-jekyll!
-  rake (~> 10.0)
+  rake (~> 12.3)
 
 BUNDLED WITH
    1.15.1
